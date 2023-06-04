@@ -1,0 +1,29 @@
+@use 'shared/styles/functions';
+
+.incdec {
+    display: flex;
+    flex-direction: column;
+}
+
+.incdec__inc {
+    margin-bottom: 5px;
+    border: none;
+    padding: 0;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid functions.color('gray900');
+    background-color: transparent;
+}
+
+.incdec__dec {
+    border: none;
+    padding: 0;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid functions.color('gray900');
+    background-color: transparent;
+}

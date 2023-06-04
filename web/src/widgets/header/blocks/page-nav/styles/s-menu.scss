@@ -1,0 +1,68 @@
+@mixin module {
+    .s-menu__first-lvl {
+        display: grid;
+        grid-auto-flow: column;
+        column-gap: 40px;
+        padding: 0;
+
+        list-style: none;
+    }
+
+    .s-menu__first-lvl-btn {
+        cursor: pointer;
+        font-weight: 700;
+        font-size: 16px;
+        background-color: transparent;
+        border: none;
+        color: #000
+    }
+
+    .s-menu__popup {
+        padding: 20px 0 40px;
+        border: var(--gray300) 1px solid;
+        position: absolute;
+        z-index: 10;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        box-shadow: 0px 20px 18px rgb(0 0 0 / 15%);
+    }
+
+    .s-menu__second-lvl {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+
+        width: 1230px;
+        margin: 0 auto;
+        display: grid;
+        justify-content: center;
+        grid-template-columns: repeat(3, 180px);
+    }
+
+    .s-menu__second-lvl-title {
+        margin: 0;
+        color: var(--gray900);
+        font-weight: 700;
+        line-height: 150%;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+
+    .s-menu__third-lvl {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .s-menu__third-lvl-item {
+        margin-top: 8px;
+    }
+
+    .s-menu__third-lvl-link {
+        line-height: 150%;
+        color: unset;
+        text-decoration: none;
+    }
+}

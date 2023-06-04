@@ -1,0 +1,33 @@
+services:
+  nginx:
+    image: nginx:latest
+    restart: always
+    ports:
+      - 3000:80
+    volumes:
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+  web:
+    build: 
+      context: ./web
+      dockerfile: Dockerfile.prod
+    restart: always
+    env_file:
+      - ./web/.env.prod
+  api:
+    build: 
+      context: ./api
+      dockerfile: Dockerfile.prod
+    restart: always
+    env_file:
+      - ./api/.env.prod
+  postgres:
+    image: postgres:12-alpine
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: password
+    volumes:
+      - db:/var/lib/postgresql/data
+      - ./postgres/backup-createx.sql:/backup-createx.sql
+      - ./postgres/init-db.sh:/docker-entrypoint-initdb.d/init-db.sh
+volumes:
+  db:

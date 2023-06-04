@@ -1,0 +1,14 @@
+@use 'shared/styles/functions';
+
+.btn_theme_solid {
+    background-color: functions.color('primary');
+
+    .btn__text {
+        color: #fff;
+    }
+
+    &:hover,
+    &.btn_pressed {
+        background-color: darken(functions.color('primary'), 3.5%);
+    }
+}

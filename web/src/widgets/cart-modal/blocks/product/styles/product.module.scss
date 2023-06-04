@@ -1,0 +1,107 @@
+@use 'shared/styles/functions';
+
+.product {
+    position: relative;
+    display: flex;
+    width: 304px;
+}
+
+
+.product__image {
+    width: 80px;
+    height: 80px;
+    margin-right: 16px;
+}
+
+
+.product__name {
+    display: inline-block;
+    line-height: 150%;
+    width: 168px;
+    font-weight: 700;
+    color: functions.color('gray900');
+    margin-bottom: 4px;
+}
+
+.product__remove {
+    cursor: pointer;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 16px;
+    height: 16px;
+    background-image: url('/images/trash-can.svg');
+    background-color: unset;
+    border: none;
+}
+
+
+.product__characteristic-values {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 12px;
+}
+
+.product__characteristic-values-name {
+    font-size: 12px;
+    color: functions.color('gray700');
+
+}
+
+.product__characteristic-values-value {
+    margin-left: 4px;
+    font-size: 12px;
+}
+
+
+.product__quantity {
+    width: 72px;
+    margin-bottom: 4px;
+    margin-right: 14px;
+}
+
+
+.product__sale-price {
+    color: functions.color('danger');
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 26px;
+}
+
+.product__price {
+
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 26px;
+
+    &_old {
+        margin-left: 4px;
+        font-size: 12px;
+        text-decoration: line-through;
+        color: functions.color('gray700')
+    }
+}
+
+
+.product__move-fav-btn {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    height: 36px;
+    border: none;
+    background-color: unset;
+    font-weight: 700;
+    padding: 0;
+    font-size: 12px;
+    color: functions.color('gray800');
+
+    &::after {
+        content: '';
+        display: inline-block;
+        margin-left: 8px;
+        background: center/contain no-repeat url('/images/heart.svg');
+        width: 15px;
+        height: 13px;
+    }
+}

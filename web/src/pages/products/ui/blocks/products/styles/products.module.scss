@@ -1,0 +1,24 @@
+.products {
+    width: 1230px;
+    margin: 0 auto;
+}
+
+.products_loading {
+    opacity: 0.7;
+}
+
+.products__toolbar {
+    margin-bottom: 32px;
+}
+
+.products__layout {
+    display: flex;
+}
+
+.products__catalog {
+    flex-grow: 1;
+}
+
+.products__filters {
+    margin-right: 60px;
+}

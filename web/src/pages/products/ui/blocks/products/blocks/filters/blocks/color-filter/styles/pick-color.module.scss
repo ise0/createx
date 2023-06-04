@@ -1,0 +1,5 @@
+.pick-color__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 52px);
+    gap: 8px 10px;
+}

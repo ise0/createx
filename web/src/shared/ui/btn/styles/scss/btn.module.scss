@@ -1,0 +1,32 @@
+@use './_size/btn_size.scss';
+@use './_theme/btn_theme.scss';
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+
+  border: none;
+  color: unset;
+  text-decoration: none;
+  cursor: pointer;
+
+  border-radius: 4px;
+
+  outline: 5px;
+}
+
+.btn__text {
+  white-space: nowrap;
+}
+
+.btn__icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px
+}
+
+.btn_disabled {
+  opacity: 0.5;
+}

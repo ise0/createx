@@ -1,0 +1,29 @@
+@use 'shared/styles/functions';
+
+.notification {
+    width: 320px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 4px;
+}
+
+.notification__title {
+    margin: 0 0 15px;
+    font-size: 20px;
+}
+
+.notification__text {
+    margin: 0 0 15px;
+}
+
+.notification__btn {
+    cursor: pointer;
+    display: block;
+    font-weight: 700;
+    border: none;
+    color: #fff;
+    border-radius: 30px;
+    height: 40px;
+    width: 100%;
+    background-color: functions.color('primary');
+}

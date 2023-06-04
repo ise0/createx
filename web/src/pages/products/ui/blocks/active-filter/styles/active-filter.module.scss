@@ -1,0 +1,28 @@
+@use 'shared/styles/functions';
+
+.active-filter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    color: functions.color('gray600');
+    border: none;
+    background-color: unset;
+    padding: 0;
+    white-space: nowrap;
+    cursor: pointer;
+
+    &::before {
+        content: '';
+        display: block;
+        margin-right: 8px;
+        width: 16px;
+        height: 16px;
+        background: center/ contain no-repeat url('/images/cross.svg');
+
+    }
+
+    &:hover {
+        color: functions.color('gray800');
+    }
+}

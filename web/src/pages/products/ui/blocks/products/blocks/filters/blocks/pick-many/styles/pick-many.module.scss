@@ -1,0 +1,21 @@
+@use 'shared/styles/functions';
+
+.pick-many__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    row-gap: 13px;
+    grid-auto-rows: min-content;
+}
+
+.pick-many__item {
+    display: flex;
+    align-items: center;
+}
+
+
+.pick-many__num-elems {
+    margin-left: 5px;
+    color: functions.color('gray600');
+}

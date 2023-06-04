@@ -1,0 +1,36 @@
+@use 'shared/styles/functions';
+
+.flag {
+    display: inline-flex;
+    min-width: min-content;
+    align-items: center;
+    justify-content: center;
+}
+
+.flag__ctrl {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1.5px;
+    height: 24px;
+    width: 24px;
+
+    border: 1px solid functions.color('gray400');
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+
+.flag_checked .flag__ctrl {
+    border-color: functions.color('primary');
+}
+
+.flag_pressed .flag__ctrl {
+    opacity: 0.3;
+}
+
+.flag_focused .flag__ctrl {
+    outline: 1px solid functions.color('gray900');
+    outline-offset: 1.5px;
+}

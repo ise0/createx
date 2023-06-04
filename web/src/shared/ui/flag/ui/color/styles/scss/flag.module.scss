@@ -1,0 +1,77 @@
+@use 'shared/styles/functions';
+@use 'shared/styles/mixins';
+
+.flag {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.flag__input {
+    position: absolute;
+    z-index: -1;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+}
+
+.flag__label {
+    width: 100%;
+    color: functions.color('gray700');
+    font-size: 12px;
+
+    line-height: 150%;
+    text-align: center;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.flag__ctrl {
+    box-sizing: border-box;
+    margin: 1px;
+    border: 1px solid functions.color('gray400');
+    border-radius: 50%;
+
+    padding: 3px;
+
+    background-clip: content-box;
+}
+
+.flag_size_s {
+    min-width: 24px;
+
+    .flag__ctrl {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+.flag_size_m {
+    min-width: 34px;
+
+    .flag__ctrl {
+        width: 34px;
+        height: 34px;
+    }
+}
+
+.flag_hidden-text {
+    .flag__label {
+        @include mixins.visually-hidden
+    }
+}
+
+.flag_checked .flag__ctrl {
+    border: 1px solid functions.color('primary');
+}
+
+.flag_pressed {
+    opacity: 0.3;
+}
+
+.flag_focused .flag__ctrl {
+    outline: 1px solid functions.color('gray900');
+    outline-offset: 1px;
+}

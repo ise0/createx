@@ -1,0 +1,12 @@
+@use 'shared/styles/functions';
+
+.filters {
+    width: 255px;
+}
+
+.filters__item:nth-last-child(1n+2)::after {
+    content: '';
+    display: block;
+    margin: 20px 0;
+    border-bottom: 1px solid functions.color('gray300');
+}

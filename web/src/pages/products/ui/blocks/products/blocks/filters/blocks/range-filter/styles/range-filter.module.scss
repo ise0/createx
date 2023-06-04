@@ -1,0 +1,18 @@
+@use 'shared/styles/functions';
+
+.range-filter__slider {
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+.range-filter__inputs {
+    display: flex;
+    align-items: center;
+}
+
+.range-filter__sep {
+    width: 10px;
+    margin: 0 12px;
+    height: 1px;
+    background-color: functions.color('gray800');
+}

@@ -1,0 +1,95 @@
+@use 'shared/styles/functions';
+
+.flag {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+
+.flag__input {
+    position: absolute;
+    z-index: -1;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+}
+
+.flag__label {
+    width: 100%;
+
+    font-size: 14px;
+
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.flag_style_checkbox {
+    .flag__ctrl {
+        min-width: 16px;
+        height: 16px;
+        margin: 1px 12px 1px 1px;
+        box-sizing: border-box;
+
+        border: 1px solid functions.color('gray500');
+        border-radius: 3px;
+    }
+
+    &.flag_checked .flag__ctrl {
+        position: relative;
+        background-color: functions.color('primary');
+        border: none;
+
+        &::after {
+            content: "";
+
+            position: absolute;
+            left: (16px - 10px) / 2;
+            top: (16px - 8px) / 2;
+
+            width: 10px;
+            height: 8px;
+
+            background: center/contain no-repeat url("data:image/svg+xml,%3Csvg width='10' height='9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M9.828.695a.73.73 0 0 1 0 .943L3.945 8.305a.54.54 0 0 1-.832 0L.173 4.97a.731.731 0 0 1 0-.942.54.54 0 0 1 .831 0L3.53 6.89 8.996.695a.54.54 0 0 1 .832 0Z' fill='%23fff'/%3E%3C/svg%3E");
+        }
+    }
+}
+
+.flag_style_radio {
+    .flag__ctrl {
+        min-width: 16px;
+        height: 16px;
+        margin: 1px 12px 1px 1px;
+        box-sizing: border-box;
+
+        border: 1px solid functions.color('gray500');
+        border-radius: 50%;
+    }
+
+    &.flag_checked .flag__ctrl {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &::after {
+            content: "";
+            border-radius: 50%;
+            width: 8px;
+            height: 8px;
+
+            background-color: functions.color('primary');
+        }
+    }
+}
+
+
+.flag_pressed {
+    opacity: 0.3;
+}
+
+.flag_focused .flag__ctrl {
+    outline: 1px solid functions.color('gray900');
+    outline-offset: 1px;
+}

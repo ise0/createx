@@ -1,0 +1,59 @@
+@use 'shared/styles/functions';
+@use './_size/input_size.scss';
+
+.input {
+    box-sizing: border-box;
+    display: inline-flex;
+    background-color: #fff;
+    border: 1px solid functions.color('gray400');
+    border-radius: 4px;
+}
+
+.input__input {
+    min-width: 20px;
+    width: 100%;
+    border: none;
+
+    background-color: transparent;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.input__input::-webkit-outer-spin-button,
+.input__input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.input__input[type=number] {
+    -moz-appearance: textfield;
+}
+
+
+.input__content {
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    column-gap: 5px;
+
+    &:empty {
+        display: none;
+    }
+}
+
+.input_focused {
+    border-color: rgba(23, 103, 105, 0.4);
+    box-shadow: 0px 80px 80px -20px rgba(23, 105, 106, 0.08), 0px 30px 24px -10px rgba(23, 105, 106, 0.05), 0px 12px 10px -6px rgba(23, 105, 106, 0.04), 0px 4px 4px -4px rgba(30, 33, 44, 0.03);
+}
+
+.input_status_error {
+    border-color: functions.color('danger');
+}
+
+.input__error-icon {
+    background: center/contain no-repeat url('/images/danger.svg');
+    width: 16px;
+    height: 16px;
+}

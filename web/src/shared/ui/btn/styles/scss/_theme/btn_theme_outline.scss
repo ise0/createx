@@ -1,0 +1,20 @@
+@use 'shared/styles/functions';
+
+.btn_theme_outline {
+    border: 1px solid functions.color('primary');
+
+    background-color: #fff;
+
+    .btn__text {
+        color: functions.color('primary');
+    }
+
+    &:hover,
+    &.btn_pressed {
+        background-color: functions.color('primary');
+
+        .btn__text {
+            color: #fff;
+        }
+    }
+}

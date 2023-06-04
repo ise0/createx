@@ -1,0 +1,44 @@
+@use 'shared/styles/functions';
+
+.toolbar {
+    width: 1230px;
+    display: flex;
+    align-items: center;
+}
+
+.toolbar__filters-btn {
+    width: 255px;
+    margin-right: 60px;
+}
+
+.toolbar__input {
+    display: flex;
+    align-items: center;
+    margin-right: 60px;
+}
+
+.toolbar__input-title {
+    white-space: nowrap;
+    font-size: 16px;
+    font-weight: 700;
+    margin-right: 12px;
+}
+
+.toolbar__input-post-title {
+    margin-left: 12px;
+    white-space: nowrap;
+    color: functions.color('gray700')
+}
+
+.toolbar__input-sort {
+    width: 170px;
+}
+
+
+.toolbar__input-page {
+    width: 80px;
+}
+
+.toolbar__pagintaion {
+    margin-left: auto;
+}

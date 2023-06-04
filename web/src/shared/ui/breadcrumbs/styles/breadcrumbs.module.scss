@@ -1,0 +1,50 @@
+@use 'shared/styles/functions';
+
+.breadcrumbs {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    height: 53px;
+
+    list-style: none;
+}
+
+.breadcrumbs__item {
+    display: flex;
+    align-items: center;
+
+    &::before {
+        margin: 0 8px;
+        width: 16px;
+        height: 16px;
+        content: '';
+        mask-size: contain;
+        background-color: functions.color('gray600');
+        mask-image: url('/images/right-chevron.svg');
+
+    }
+
+    &_last {
+        color: functions.color('gray600');
+
+        .breadcrumbs__link {
+            color: functions.color('gray600');
+        }
+    }
+}
+
+.breadcrumbs__home-item {
+    display: flex;
+    align-items: center;
+}
+
+.breadcrumbs__home-link {
+    background: center/contain no-repeat url('/images/home.svg') ;
+    width: 16px;
+    height: 16px;
+}
+
+.breadcrumbs__link {
+    color: functions.color('gray800');
+    text-decoration: none;
+}

@@ -1,0 +1,87 @@
+@use 'shared/styles/functions';
+
+.sign-in__loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.sign-in__loading-spin {
+    width: 70px;
+    height: 70px;
+}
+
+
+.sign-in {
+    position: relative;
+    background-color: #fff;
+    margin: 15px 0;
+    padding: 48px;
+    width: 390px;
+    display: grid;
+    row-gap: 24px;
+    border-radius: 4px;
+}
+
+.sign-in__close {
+    cursor: pointer;
+    position: absolute;
+    padding: 0;
+    top: 36px;
+    right: 36px;
+    mask: center/contain no-repeat url('/images/cross.svg');
+    background-color: functions.color('gray700');
+    border: none;
+
+    width: 24px;
+    height: 24px;
+}
+
+.sign-in__title {
+    margin: 0;
+    color: functions.color('gray900');
+    text-align: center;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 150%;
+
+}
+
+.sign-in__text {
+    color: functions.color('gray700');
+    text-align: center;
+    line-height: 150%;
+}
+
+.sign-in__error-text {
+    color: functions.color('danger');
+    line-height: 150%;
+}
+
+.sign-in__input-label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.sign-in__input-ctrl {
+    width: 100%;
+}
+
+.sign-in__input-error-text {
+    margin-top: 4px;
+    color: functions.color('danger');
+    font-size: 12px;
+    line-height: 150%;
+}
+
+.sign-in__sign-up {
+    cursor: pointer;
+    color: functions.color('primary');
+    background-color: transparent;
+    border: none;
+}

@@ -1,0 +1,13 @@
+@use 'shared/styles/functions';
+
+.search {
+    cursor: pointer;
+    border: none;
+    padding: 0;
+    width: 16px;
+    height: 16px;
+    background-color: functions.color('gray800');
+    mask-size: contain;
+    mask-position: center;
+    mask-image: url("data:image/svg+xml,%3Csvg width='16' height='16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M7.25 2.166a5.083 5.083 0 1 0 0 10.167 5.083 5.083 0 0 0 0-10.167ZM.835 7.25a6.417 6.417 0 1 1 11.399 4.044l2.739 2.734a.667.667 0 1 1-.942.944l-2.74-2.736A6.417 6.417 0 0 1 .834 7.25Z' fill='%23424551'/%3E%3C/svg%3E");
+}

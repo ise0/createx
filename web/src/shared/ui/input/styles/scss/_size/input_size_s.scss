@@ -1,0 +1,13 @@
+.input_size_s {
+    min-width: min-content;
+    height: 36px;
+    font-size: 14px;
+
+    .input__input {
+        padding: 0 12px;
+    }
+
+    .input__content {
+        margin: 2px 12px 2px 0;
+    }
+}
